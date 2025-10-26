@@ -1,9 +1,108 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>NGINX Page</title>
-</head>
-<body>
-    <h1>Welcome to NGINX server!</h1>
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElectroShop — магазин электроники</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- ШАПКА -->
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <h1 class="text-2xl font-bold text-blue-600">ElectroShop</h1>
+        <div class="flex-1 mx-6">
+          <input
+            type="text"
+            placeholder="Поиск товаров..."
+            class="w-full border rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+        </div>
+        <div class="flex items-center gap-4">
+          <button class="text-sm hover:text-blue-600">Войти</button>
+          <button class="relative">
+            🛒
+            <span
+              class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1"
+              >2</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ГЛАВНЫЙ БАННЕР -->
+    <section
+      class="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-16 text-center"
+    >
+      <h2 class="text-4xl font-bold mb-4">Лучшие гаджеты — по лучшим ценам!</h2>
+      <p class="text-lg mb-6">Смартфоны, ноутбуки, аксессуары и многое другое</p>
+      <button
+        class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition"
+      >
+        Смотреть каталог
+      </button>
+    </section>
+
+    <!-- ВИТРИНА ТОВАРОВ -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+      <h3 class="text-2xl font-bold mb-6 text-center">Популярные товары</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+        <!-- Карточка товара -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition flex flex-col items-center p-6">
+          <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center text-4xl text-blue-600 mb-4">
+            📱
+          </div>
+          <h4 class="font-semibold mb-2 text-center">Смартфон XPhone 12</h4>
+          <p class="text-gray-500 text-sm text-center mb-3">128 ГБ, OLED, 48 МП</p>
+          <span class="font-bold text-blue-600 mb-3">₽59 990</span>
+          <button
+            class="bg-blue-600 text-white text-sm px-4 py-2 rounded hover:bg-blue-700 transition"
+          >
+            В корзину
+          </button>
+        </div>
+
+        <!-- Карточка товара -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition flex flex-col items-center p-6">
+          <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center text-4xl text-blue-600 mb-4">
+            💻
+          </div>
+          <h4 class="font-semibold mb-2 text-center">Ноутбук UltraBook Z</h4>
+          <p class="text-gray-500 text-sm text-center mb-3">Intel i7, 16 ГБ, SSD 512 ГБ</p>
+          <span class="font-bold text-blue-600 mb-3">₽109 990</span>
+          <button
+            class="bg-blue-600 text-white text-sm px-4 py-2 rounded hover:bg-blue-700 transition"
+          >
+            В корзину
+          </button>
+        </div>
+
+        <!-- Карточка товара -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition flex flex-col items-center p-6">
+          <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center text-4xl text-blue-600 mb-4">
+            🎧
+          </div>
+          <h4 class="font-semibold mb-2 text-center">Наушники Sonic Air</h4>
+          <p class="text-gray-500 text-sm text-center mb-3">Bluetooth 5.3, шумоподавление</p>
+          <span class="font-bold text-blue-600 mb-3">₽8 490</span>
+          <button
+            class="bg-blue-600 text-white text-sm px-4 py-2 rounded hover:bg-blue-700 transition"
+          >
+            В корзину
+          </button>
+        </div>
+
+      </div>zz
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="bg-gray-900 text-gray-300 py-6">
+      <div class="max-w-7xl mx-auto px-6 text-center text-sm">
+        <p>© 2025 ElectroShop. Все права защищены.</p>
+        <p class="mt-2">Связаться с нами: support@electroshop.ru</p>
+      </div>
+    </footer>
+  </body>
 </html>
