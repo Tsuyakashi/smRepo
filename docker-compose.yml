@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: electroshop
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app              # монтируем код для автообновления
+      - /app/node_modules   # чтобы node_modules оставались внутри контейнера
+    environment:
+      - NODE_ENV=development
+    command: npm start
