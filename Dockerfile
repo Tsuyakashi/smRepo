@@ -1,8 +1,20 @@
-# Use the official NGINX image as the base
-FROM nginx:latest
+# Используем официальный Node.js образ
+FROM node:18-alpine
 
-# Copy your custom index.html to the NGINX web root
-COPY index.html /usr/share/nginx/html/index.html
+# Задаём рабочую директорию внутри контейнера
+WORKDIR /app
 
-# Expose port 80 (default NGINX port)
-EXPOSE 80
+# Копируем package*.json (чтобы сначала установить зависимости)
+COPY package*.json ./
+
+# Устанавливаем зависимости (в продакшене — только нужные)
+RUN npm install --production
+
+# Копируем всё остальное в контейнер
+COPY . .
+
+# Указываем порт (должен совпадать с портом в server.js)
+EXPOSE 3000
+
+# Команда запуска
+CMD ["node", "server.js"]
